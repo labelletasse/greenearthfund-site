@@ -1,0 +1,135 @@
+{
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/homepage/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/members/",
+      "destination": "/members-2/",
+      "permanent": true
+    },
+    {
+      "source": "/members-pia-bozyel/",
+      "destination": "/members-2/",
+      "permanent": true
+    },
+    {
+      "source": "/donation-confirmation/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/donation-failed/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/donation-history/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/donor-dashboard/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/what-we-do/",
+      "destination": "/activities/",
+      "permanent": true
+    },
+    {
+      "source": "/services-list/",
+      "destination": "/activities/",
+      "permanent": true
+    },
+    {
+      "source": "/team-member-alex-martinez/",
+      "destination": "/members-2/",
+      "permanent": true
+    },
+    {
+      "source": "/sample-page/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/2023/05/27/the-resident-coordinator-system-today/",
+      "destination": "/2023/08/27/un-report-average-of-735-million-people-faced-hunger-in-2022/",
+      "permanent": true
+    },
+    {
+      "source": "/2023/08/27/turk-girisimci-pia-bozyel-new-yorkta-surdurulebilirlik-etkinlikleriyle-farkindalik-yaratiyor/",
+      "destination": "/2023/08/27/greenearth-fund-raises-awareness-with-sustainability-events-in-new-york/",
+      "permanent": true
+    },
+    {
+      "source": "/homepage",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/members",
+      "destination": "/members-2/",
+      "permanent": true
+    },
+    {
+      "source": "/members-pia-bozyel",
+      "destination": "/members-2/",
+      "permanent": true
+    },
+    {
+      "source": "/donation-confirmation",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/donation-failed",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/donation-history",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/donor-dashboard",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/what-we-do",
+      "destination": "/activities/",
+      "permanent": true
+    },
+    {
+      "source": "/services-list",
+      "destination": "/activities/",
+      "permanent": true
+    },
+    {
+      "source": "/team-member-alex-martinez",
+      "destination": "/members-2/",
+      "permanent": true
+    },
+    {
+      "source": "/sample-page",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/2023/05/27/the-resident-coordinator-system-today",
+      "destination": "/2023/08/27/un-report-average-of-735-million-people-faced-hunger-in-2022/",
+      "permanent": true
+    },
+    {
+      "source": "/2023/08/27/turk-girisimci-pia-bozyel-new-yorkta-surdurulebilirlik-etkinlikleriyle-farkindalik-yaratiyor",
+      "destination": "/2023/08/27/greenearth-fund-raises-awareness-with-sustainability-events-in-new-york/",
+      "permanent": true
+    }
+  ]
+}
