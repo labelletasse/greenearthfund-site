@@ -388,6 +388,87 @@ img.is-missing{visibility:hidden}
 @media (max-width:1000px){.gallery.sdg{grid-template-columns:repeat(4,1fr)}}
 @media (max-width:640px){.gallery.sdg{grid-template-columns:repeat(3,1fr)}}
 
+/* ---------- phone layout ---------- */
+@media (max-width:1060px){
+  /* backdrop-filter traps the fixed menu inside the header; use a solid bar on small screens */
+  .site-header{backdrop-filter:none;-webkit-backdrop-filter:none;background:var(--lichen)}
+  .bar{min-height:64px}
+  .nav{inset:64px 0 0 0;padding:8px 20px 32px;border-top:1px solid var(--line);z-index:60}
+  .nav>ul>li{border-bottom:1px solid var(--line)}
+  .nav>ul>li>a{font-family:var(--head);font-size:26px;padding:14px 0}
+  .sub{padding:0 0 12px 0}
+  .sub a{font-size:17px;padding:7px 0}
+  body.menu-open{overflow:hidden}
+}
+@media (max-width:640px){
+  .brand-logo{height:24px}
+  .hero{padding-top:28px}
+  .hero h1{font-size:46px;line-height:.95}
+  .hero-kicker{font-size:16px;margin-bottom:12px}
+  .hero-text{font-size:17px;margin-top:18px}
+  .hero-media{aspect-ratio:16/10;max-width:none}
+  .actions{margin-top:22px;gap:10px}
+  .actions .btn{flex:1 1 auto}
+  .cities{padding-top:32px;padding-bottom:32px}
+  .cities ul{gap:4px 22px}
+  .cities a{font-size:28px}
+  .band{padding:48px 0}
+  .sec-head{margin-bottom:22px}
+  .sec-head h2{font-size:32px}
+  .page-head h1{font-size:44px}
+
+  /* activity + program cards become compact rows: picture left, text right */
+  .acts,.acts.acts-list{grid-template-columns:1fr;gap:14px}
+  .act a,.act-wide a{display:grid;grid-template-columns:96px 1fr;gap:14px;align-items:start;background:var(--paper);border-radius:18px;padding:12px}
+  .act-media,.act-wide .act-media{aspect-ratio:1/1;margin:0;border-radius:12px}
+  .act h3,.act-wide h2{font-size:21px;margin-bottom:4px}
+  .act p,.act-wide p{font-size:15px;margin:0 0 6px}
+  .act-wide .more{font-size:15px}
+  .feats{grid-template-columns:1fr;gap:14px}
+  .feat{display:grid;grid-template-columns:88px 1fr;gap:14px;align-items:start;background:var(--paper);border-radius:18px;padding:12px}
+  .feat-media{aspect-ratio:1/1;margin:0;border-radius:12px}
+  .feat h3{font-size:20px;margin-bottom:4px}
+  .feat p{font-size:15px}
+
+  /* people: board in two columns, members in two columns */
+  .people,.people-lg{grid-template-columns:repeat(2,1fr);gap:22px 12px}
+  .person-lg h3{font-size:20px}
+  .person h3{font-size:18px}
+  .person-in{width:32px;height:32px;top:8px;right:8px}
+  .people + .sec-head{margin-top:44px}
+  .amb .portrait{max-width:180px}
+  .amb h3{font-size:26px}
+  .amb p{font-size:16px}
+
+  .chaps{grid-template-columns:repeat(2,1fr)}
+  .chap h3{font-size:18px}
+  .partners{grid-template-columns:repeat(2,1fr);gap:12px}
+  .news-col h3{font-size:26px}
+  .news-list span{font-size:17px}
+  .post-grid{gap:28px}
+  .two-links a{padding:24px}
+  .two-links h2{font-size:26px}
+  .cta-inline{padding:22px;border-radius:20px}
+  .cta-inline p{font-size:19px}
+  .contact-info dd{font-size:19px}
+  .donate-band{padding:56px 0}
+  .donate-band h2{font-size:38px}
+
+  /* shorter footer: pages in two columns */
+  .site-footer{padding-top:48px}
+  .foot-grid{gap:28px;padding-bottom:36px}
+  .foot-list{grid-template-columns:1fr 1fr;gap:8px 16px}
+  .contact-list{grid-template-columns:1fr}
+  .donate-band + .site-footer .foot-grid{padding-top:44px}
+  .dlg-frame iframe{height:70vh}
+}
+@media (max-width:640px){
+  .act a > .act-media,.feat > .feat-media{grid-column:1;grid-row:1 / span 2}
+  .act a > h3,.act a > p,.feat > h3,.feat > p{grid-column:2}
+  .act a > h3,.feat > h3{align-self:end}
+  .act a > p,.feat > p{align-self:start}
+}
+
 </style>
 <script>document.addEventListener('error',function(e){var t=e.target;if(t&&t.tagName==='IMG'){t.classList.add('is-missing');}},true);</script>
 </head>
@@ -406,7 +487,7 @@ img.is-missing{visibility:hidden}
   </div>
 </header>
 <main id="main">
-<section class="page-head"><div class="wrap"><h1>Frequently asked questions</h1><p class="lede">Can't find your answer? Email <a href="mailto:info@greenearthfund.org">info@greenearthfund.org</a> or call <a href="tel:+19297339915">+1 (929) 733-9915</a>.</p></div></section><section class="band"><div class="wrap narrow"><div class="accordion"><details class="acc"><summary><span>How do I manage my Green Earth Fund membership?</span><i aria-hidden="true"></i></summary><div class="acc-body"><p>Our Supporter Care team can assist you with:</p><ul><li>Changing your donation amount</li><li>Changing your payment type</li><li>Starting or stopping your contribution</li><li>Updating how Green Earth Fund contacts you</li></ul><p>There are two ways to connect with our team:</p><ul><li>By phone: <a href="tel:+19297339915">+1 (929) 733-9915</a>, Monday to Friday, 09:30 to 17:00 PT</li><li>By email: <a href="mailto:info@greenearthfund.org">info@greenearthfund.org</a>. For your safety, please do not send your credit card information by email.</li></ul><p>Green Earth Fund does not accept such requests made through third parties. All requests for changes must be made at least two business days before your scheduled monthly contribution.</p></div></details><details class="acc"><summary><span>Why is monthly giving the best option?</span><i aria-hidden="true"></i></summary><div class="acc-body"><p>A monthly donation is the best option for both the Green Earth Fund and our supporters. It allows us to have a reliable support base and save time, banking fees and paper by not having to send reminders and renewal notifications to supporters. It also provides predictable funding that allows us to plan and budget our campaigns more effectively. For our supporters, it allows you to make a small monthly contribution and still play an important role in protecting the environment.</p></div></details><details class="acc"><summary><span>How is my donation used?</span><i aria-hidden="true"></i></summary><div class="acc-body"><p>Green Earth Fund Inc. spends on campaigns, public information and education, fundraising costs, administration and general administration. Monthly donors enable us to further reduce our fundraising costs.</p></div></details><details class="acc"><summary><span>Is it possible to get a refund on my donation?</span><i aria-hidden="true"></i></summary><div class="acc-body"><p>The Green Earth Fund is deeply grateful for your support and we hope you are proud of what we have accomplished together. However, if an online or frontline donation is made in error, we will honor all refund requests for contributions made within the last 30 days.</p><p>We expect our supporters who want to donate to regularly check the accuracy of the transactions.</p><p>Refund requests for donations to Green Earth Fund, Inc. must be made in writing and include details of the initial transaction, such as the date, donation amount, donor's name, and nature of the fault.</p><p>Refund requests can be submitted via email: <a href="mailto:info@greenearthfund.org">info@greenearthfund.org</a></p><p>Please note that all donations made through greenearthfund.org and all gifts under $50 per month initiated with a Green Earth Fund representative will be directed to the Green Earth Fund, Inc., unless otherwise noted. Green Earth Fund, Inc. is a not-for-profit, tax-exempt 501(c)(3) organization. Donations to the Green Earth Fund, Inc. are tax deductible.</p></div></details><details class="acc"><summary><span>Will I receive a tax receipt for my gift?</span><i aria-hidden="true"></i></summary><div class="acc-body"><p>Green Earth Fund, Inc. is a not-for-profit, tax-exempt organization. Contributions to the Green Earth Fund are tax deductible as we actively work for new environmental laws and policies.</p><p>Green Earth is represented in the United States by the Green Earth Fund, Inc.</p><p>The Green Earth Fund, Inc. is a grant organization that funds Green Earth's research, charitable, and public education activities and organizations around the world. The Green Earth Fund is registered as a 501(c)(3) organization and does not engage in lobbying activities.</p><p>You can change the asset you support at any time by calling our Supporter Services at <a href="tel:+19297339915">+1 (929) 733-9915</a>, Monday to Friday, 09:30 to 17:00 PT. You can also email us at <a href="mailto:info@greenearthfund.org">info@greenearthfund.org</a>.</p></div></details><details class="acc"><summary><span>Can I see your financial reports?</span><i aria-hidden="true"></i></summary><div class="acc-body"><p>You can view our annual reports and financial statements. You can also call us at <a href="tel:+19297339915">+1 (929) 733-9915</a>, Monday to Friday, 09:30 to 17:00 PT and we'll be happy to send you a copy.</p></div></details><details class="acc"><summary><span>How do I subscribe, unsubscribe or change my email address?</span><i aria-hidden="true"></i></summary><div class="acc-body"><p>You can subscribe at <a href="../">greenearthfund.org</a>. To unsubscribe from emails, please use the links at the bottom of all our emails.</p></div></details><details class="acc"><summary><span>I&#x27;ve renewed my membership but keep getting renewal reminders?</span><i aria-hidden="true"></i></summary><div class="acc-body"><p>Thank you for your support and we don't want to bother you with renewal requests. Green Earth memberships run for a calendar year starting in January and continuing through December. This ensures our renewal mailers are cost effective. All renewals will be made in January of the current year. Sorry if you already renewed this year but are getting notifications, our renewal files were edited long before they were posted. You should not receive future renewal requests this year. If you continue to receive renewal notifications, please call us at <a href="tel:+19297339915">+1 (929) 733-9915</a>, Monday to Friday, 9:30am to 5pm PT or email us at <a href="mailto:info@greenearthfund.org">info@greenearthfund.org</a>, as you may have a duplicate account.</p><p>The best way to reduce the number of renewal requests you receive is to respond earlier in the year or consider becoming a monthly donor.</p></div></details><details class="acc"><summary><span>Does Green Earth rent, sell, or trade my information?</span><i aria-hidden="true"></i></summary><div class="acc-body"><p>Green Earth occasionally shares donors' mailing addresses with other like-minded organizations in exchange for contacting supporters. We will never share your phone number, email address or donation information. If you would prefer not to share your postal address, please call us at <a href="tel:+19297339915">+1 (929) 733-9915</a>, Monday to Friday, 9:30 to 17:00 PT and we'll be happy to flag your account accordingly. You can also email us at <a href="mailto:info@greenearthfund.org">info@greenearthfund.org</a>.</p></div></details><details class="acc"><summary><span>Does Green Earth do door-to-door fundraising?</span><i aria-hidden="true"></i></summary><div class="acc-body"><p>Yes, Green Earth goes door to door to raise donations for our critical campaigns to protect nature and wildlife.</p></div></details><details class="acc"><summary><span>I&#x27;m not a Green Earth supporter but I&#x27;m receiving mail from you, how can I remove my address?</span><i aria-hidden="true"></i></summary><div class="acc-body"><p>If you received mail from us and you are not a Green Earth supporter, we may have gotten your name in a list exchange with another like-minded organization. We encourage you to contact organizations you have supported in the past and request that they not share your information. Alternatively, you can contact the Direct Mail Association and be added to the National Mailing List at <a href="https://www.dmachoice.org" target="_blank" rel="noopener">www.dmachoice.org</a>. If these steps do not resolve your issue, please call our Supporter Services at <a href="tel:+19297339915">+1 (929) 733-9915</a>, Monday to Friday, 9:30am to 5pm PT.</p></div></details></div></div></section>
+<section class="page-head"><div class="wrap"><h1>Frequently asked questions</h1><p class="lede">Can't find your answer? Email <a href="mailto:info@greenearthfund.org">info@greenearthfund.org</a>.</p></div></section><section class="band"><div class="wrap narrow"><div class="accordion"><details class="acc"><summary><span>How do I manage my Green Earth Fund membership?</span><i aria-hidden="true"></i></summary><div class="acc-body"><p>Our Supporter Care team can assist you with:</p><ul><li>Changing your donation amount</li><li>Changing your payment type</li><li>Starting or stopping your contribution</li><li>Updating how Green Earth Fund contacts you</li></ul><p>You can reach our team by email at <a href="mailto:info@greenearthfund.org">info@greenearthfund.org</a>. For your safety, please do not send your credit card information by email.</p><p>Green Earth Fund does not accept such requests made through third parties. All requests for changes must be made at least two business days before your scheduled monthly contribution.</p></div></details><details class="acc"><summary><span>Why is monthly giving the best option?</span><i aria-hidden="true"></i></summary><div class="acc-body"><p>A monthly donation is the best option for both the Green Earth Fund and our supporters. It allows us to have a reliable support base and save time, banking fees and paper by not having to send reminders and renewal notifications to supporters. It also provides predictable funding that allows us to plan and budget our campaigns more effectively. For our supporters, it allows you to make a small monthly contribution and still play an important role in protecting the environment.</p></div></details><details class="acc"><summary><span>How is my donation used?</span><i aria-hidden="true"></i></summary><div class="acc-body"><p>Green Earth Fund Inc. spends on campaigns, public information and education, fundraising costs, administration and general administration. Monthly donors enable us to further reduce our fundraising costs.</p></div></details><details class="acc"><summary><span>Is it possible to get a refund on my donation?</span><i aria-hidden="true"></i></summary><div class="acc-body"><p>The Green Earth Fund is deeply grateful for your support and we hope you are proud of what we have accomplished together. However, if an online or frontline donation is made in error, we will honor all refund requests for contributions made within the last 30 days.</p><p>We expect our supporters who want to donate to regularly check the accuracy of the transactions.</p><p>Refund requests for donations to Green Earth Fund, Inc. must be made in writing and include details of the initial transaction, such as the date, donation amount, donor's name, and nature of the fault.</p><p>Refund requests can be submitted via email: <a href="mailto:info@greenearthfund.org">info@greenearthfund.org</a></p><p>Please note that all donations made through greenearthfund.org and all gifts under $50 per month initiated with a Green Earth Fund representative will be directed to the Green Earth Fund, Inc., unless otherwise noted. Green Earth Fund, Inc. is a not-for-profit, tax-exempt 501(c)(3) organization. Donations to the Green Earth Fund, Inc. are tax deductible.</p></div></details><details class="acc"><summary><span>Will I receive a tax receipt for my gift?</span><i aria-hidden="true"></i></summary><div class="acc-body"><p>Green Earth Fund, Inc. is a not-for-profit, tax-exempt organization. Contributions to the Green Earth Fund are tax deductible as we actively work for new environmental laws and policies.</p><p>Green Earth is represented in the United States by the Green Earth Fund, Inc.</p><p>The Green Earth Fund, Inc. is a grant organization that funds Green Earth's research, charitable, and public education activities and organizations around the world. The Green Earth Fund is registered as a 501(c)(3) organization and does not engage in lobbying activities.</p><p>You can change the asset you support at any time by emailing us at <a href="mailto:info@greenearthfund.org">info@greenearthfund.org</a>.</p></div></details><details class="acc"><summary><span>Can I see your financial reports?</span><i aria-hidden="true"></i></summary><div class="acc-body"><p>You can view our annual reports and financial statements. You can also email us at <a href="mailto:info@greenearthfund.org">info@greenearthfund.org</a> and we'll be happy to send you a copy.</p></div></details><details class="acc"><summary><span>How do I subscribe, unsubscribe or change my email address?</span><i aria-hidden="true"></i></summary><div class="acc-body"><p>You can subscribe at <a href="../">greenearthfund.org</a>. To unsubscribe from emails, please use the links at the bottom of all our emails.</p></div></details><details class="acc"><summary><span>I&#x27;ve renewed my membership but keep getting renewal reminders?</span><i aria-hidden="true"></i></summary><div class="acc-body"><p>Thank you for your support and we don't want to bother you with renewal requests. Green Earth memberships run for a calendar year starting in January and continuing through December. This ensures our renewal mailers are cost effective. All renewals will be made in January of the current year. Sorry if you already renewed this year but are getting notifications, our renewal files were edited long before they were posted. You should not receive future renewal requests this year. If you continue to receive renewal notifications, please email us at <a href="mailto:info@greenearthfund.org">info@greenearthfund.org</a>, as you may have a duplicate account.</p><p>The best way to reduce the number of renewal requests you receive is to respond earlier in the year or consider becoming a monthly donor.</p></div></details><details class="acc"><summary><span>Does Green Earth rent, sell, or trade my information?</span><i aria-hidden="true"></i></summary><div class="acc-body"><p>Green Earth occasionally shares donors' mailing addresses with other like-minded organizations in exchange for contacting supporters. We will never share your phone number, email address or donation information. If you would prefer not to share your postal address, please email us at <a href="mailto:info@greenearthfund.org">info@greenearthfund.org</a> and we'll be happy to flag your account accordingly.</p></div></details><details class="acc"><summary><span>Does Green Earth do door-to-door fundraising?</span><i aria-hidden="true"></i></summary><div class="acc-body"><p>Yes, Green Earth goes door to door to raise donations for our critical campaigns to protect nature and wildlife.</p></div></details><details class="acc"><summary><span>I&#x27;m not a Green Earth supporter but I&#x27;m receiving mail from you, how can I remove my address?</span><i aria-hidden="true"></i></summary><div class="acc-body"><p>If you received mail from us and you are not a Green Earth supporter, we may have gotten your name in a list exchange with another like-minded organization. We encourage you to contact organizations you have supported in the past and request that they not share your information. Alternatively, you can contact the Direct Mail Association and be added to the National Mailing List at <a href="https://www.dmachoice.org" target="_blank" rel="noopener">www.dmachoice.org</a>. If these steps do not resolve your issue, please email us at <a href="mailto:info@greenearthfund.org">info@greenearthfund.org</a>.</p></div></details></div></div></section>
 </main>
 <footer class="site-footer">
   <div class="wrap foot-grid">
@@ -423,7 +504,6 @@ img.is-missing{visibility:hidden}
     <div>
       <h2 class="foot-h">Contact us</h2>
       <ul class="foot-list contact-list">
-        <li><span>Call us directly</span><a href="tel:+19297339915">+1 (929) 733-9915</a></li>
         <li><span>Email us directly</span><a href="mailto:info@greenearthfund.org">info@greenearthfund.org</a></li>
         <li><span>Address</span>447 Broadway, Floor 2, Mailbox #11<br>New York, NY 10013</li>
       </ul>

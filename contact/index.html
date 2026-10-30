@@ -388,6 +388,87 @@ img.is-missing{visibility:hidden}
 @media (max-width:1000px){.gallery.sdg{grid-template-columns:repeat(4,1fr)}}
 @media (max-width:640px){.gallery.sdg{grid-template-columns:repeat(3,1fr)}}
 
+/* ---------- phone layout ---------- */
+@media (max-width:1060px){
+  /* backdrop-filter traps the fixed menu inside the header; use a solid bar on small screens */
+  .site-header{backdrop-filter:none;-webkit-backdrop-filter:none;background:var(--lichen)}
+  .bar{min-height:64px}
+  .nav{inset:64px 0 0 0;padding:8px 20px 32px;border-top:1px solid var(--line);z-index:60}
+  .nav>ul>li{border-bottom:1px solid var(--line)}
+  .nav>ul>li>a{font-family:var(--head);font-size:26px;padding:14px 0}
+  .sub{padding:0 0 12px 0}
+  .sub a{font-size:17px;padding:7px 0}
+  body.menu-open{overflow:hidden}
+}
+@media (max-width:640px){
+  .brand-logo{height:24px}
+  .hero{padding-top:28px}
+  .hero h1{font-size:46px;line-height:.95}
+  .hero-kicker{font-size:16px;margin-bottom:12px}
+  .hero-text{font-size:17px;margin-top:18px}
+  .hero-media{aspect-ratio:16/10;max-width:none}
+  .actions{margin-top:22px;gap:10px}
+  .actions .btn{flex:1 1 auto}
+  .cities{padding-top:32px;padding-bottom:32px}
+  .cities ul{gap:4px 22px}
+  .cities a{font-size:28px}
+  .band{padding:48px 0}
+  .sec-head{margin-bottom:22px}
+  .sec-head h2{font-size:32px}
+  .page-head h1{font-size:44px}
+
+  /* activity + program cards become compact rows: picture left, text right */
+  .acts,.acts.acts-list{grid-template-columns:1fr;gap:14px}
+  .act a,.act-wide a{display:grid;grid-template-columns:96px 1fr;gap:14px;align-items:start;background:var(--paper);border-radius:18px;padding:12px}
+  .act-media,.act-wide .act-media{aspect-ratio:1/1;margin:0;border-radius:12px}
+  .act h3,.act-wide h2{font-size:21px;margin-bottom:4px}
+  .act p,.act-wide p{font-size:15px;margin:0 0 6px}
+  .act-wide .more{font-size:15px}
+  .feats{grid-template-columns:1fr;gap:14px}
+  .feat{display:grid;grid-template-columns:88px 1fr;gap:14px;align-items:start;background:var(--paper);border-radius:18px;padding:12px}
+  .feat-media{aspect-ratio:1/1;margin:0;border-radius:12px}
+  .feat h3{font-size:20px;margin-bottom:4px}
+  .feat p{font-size:15px}
+
+  /* people: board in two columns, members in two columns */
+  .people,.people-lg{grid-template-columns:repeat(2,1fr);gap:22px 12px}
+  .person-lg h3{font-size:20px}
+  .person h3{font-size:18px}
+  .person-in{width:32px;height:32px;top:8px;right:8px}
+  .people + .sec-head{margin-top:44px}
+  .amb .portrait{max-width:180px}
+  .amb h3{font-size:26px}
+  .amb p{font-size:16px}
+
+  .chaps{grid-template-columns:repeat(2,1fr)}
+  .chap h3{font-size:18px}
+  .partners{grid-template-columns:repeat(2,1fr);gap:12px}
+  .news-col h3{font-size:26px}
+  .news-list span{font-size:17px}
+  .post-grid{gap:28px}
+  .two-links a{padding:24px}
+  .two-links h2{font-size:26px}
+  .cta-inline{padding:22px;border-radius:20px}
+  .cta-inline p{font-size:19px}
+  .contact-info dd{font-size:19px}
+  .donate-band{padding:56px 0}
+  .donate-band h2{font-size:38px}
+
+  /* shorter footer: pages in two columns */
+  .site-footer{padding-top:48px}
+  .foot-grid{gap:28px;padding-bottom:36px}
+  .foot-list{grid-template-columns:1fr 1fr;gap:8px 16px}
+  .contact-list{grid-template-columns:1fr}
+  .donate-band + .site-footer .foot-grid{padding-top:44px}
+  .dlg-frame iframe{height:70vh}
+}
+@media (max-width:640px){
+  .act a > .act-media,.feat > .feat-media{grid-column:1;grid-row:1 / span 2}
+  .act a > h3,.act a > p,.feat > h3,.feat > p{grid-column:2}
+  .act a > h3,.feat > h3{align-self:end}
+  .act a > p,.feat > p{align-self:start}
+}
+
 </style>
 <script>document.addEventListener('error',function(e){var t=e.target;if(t&&t.tagName==='IMG'){t.classList.add('is-missing');}},true);</script>
 </head>
@@ -412,7 +493,6 @@ img.is-missing{visibility:hidden}
     <dl>
       <div><dt>Location</dt><dd>New York, USA<br>447 Broadway, Floor 2, Mailbox #11<br>New York, NY 10013</dd></div>
       <div><dt>Email</dt><dd><a href="mailto:info@greenearthfund.org">info@greenearthfund.org</a></dd></div>
-      <div><dt>Phone</dt><dd><a href="tel:+19297339915">+1 (929) 733-9915</a></dd></div>
     </dl>
     <h2 class="small-h">Follow us</h2>
     <ul class="social"><li><a href="https://www.linkedin.com/company/green-earth-fund/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1-.02-5zM3 9.75h4V21H3zM9.5 9.75h3.8v1.6h.06c.53-1 1.84-2.06 3.78-2.06 4.04 0 4.79 2.66 4.79 6.12V21h-4v-4.98c0-1.19-.02-2.72-1.66-2.72-1.66 0-1.92 1.3-1.92 2.63V21h-4z"/></svg></a></li><li><a href="https://instagram.com/greenearthfundorg" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M12 7.3A4.7 4.7 0 1 0 16.7 12 4.7 4.7 0 0 0 12 7.3zm0 7.75A3.05 3.05 0 1 1 15.05 12 3.05 3.05 0 0 1 12 15.05zM17.9 7.1a1.1 1.1 0 1 1-1.1-1.1 1.1 1.1 0 0 1 1.1 1.1z"/><path d="M12 3.6c2.73 0 3.06 0 4.13.06 2.78.13 4.08 1.45 4.2 4.2.06 1.08.07 1.4.07 4.14s0 3.06-.07 4.13c-.12 2.75-1.42 4.07-4.2 4.2-1.07.05-1.4.06-4.13.06s-3.06 0-4.13-.06c-2.79-.13-4.08-1.46-4.2-4.2C3.6 15.06 3.6 14.73 3.6 12s0-3.06.07-4.14c.12-2.75 1.42-4.07 4.2-4.2C8.94 3.61 9.27 3.6 12 3.6M12 2c-2.72 0-3.06 0-4.12.06C4.24 2.23 2.23 4.24 2.06 7.88 2 8.94 2 9.28 2 12s0 3.06.06 4.12c.17 3.64 2.18 5.65 5.82 5.82C8.94 22 9.28 22 12 22s3.06 0 4.12-.06c3.63-.17 5.66-2.18 5.82-5.82C22 15.06 22 14.72 22 12s0-3.06-.06-4.12c-.16-3.63-2.18-5.65-5.82-5.82C15.06 2 14.72 2 12 2z"/></svg></a></li><li><a href="https://twitter.com/GreenEarthFund" target="_blank" rel="noopener" aria-label="X (Twitter)"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M17.75 3h3.07l-6.7 7.66L22 21h-6.17l-4.83-6.32L5.47 21H2.4l7.17-8.2L2 3h6.33l4.37 5.77zm-1.08 16.18h1.7L7.4 4.73H5.58z"/></svg></a></li><li><a href="https://www.youtube.com/@GreenEarthFund/about" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.76-1.77C18.25 5 12 5 12 5s-6.25 0-7.84.43A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.76 1.77C5.75 19 12 19 12 19s6.25 0 7.84-.43a2.5 2.5 0 0 0 1.76-1.77A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8zM10 15V9l5.2 3z"/></svg></a></li><li><a href="https://www.facebook.com/profile.php?id=100092572033029" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M13.5 21v-7.6h2.56l.38-2.97H13.5V8.54c0-.86.24-1.45 1.47-1.45h1.57V4.43a21 21 0 0 0-2.29-.12c-2.27 0-3.82 1.38-3.82 3.92v2.2H7.87v2.97h2.56V21z"/></svg></a></li></ul>
@@ -449,7 +529,6 @@ img.is-missing{visibility:hidden}
     <div>
       <h2 class="foot-h">Contact us</h2>
       <ul class="foot-list contact-list">
-        <li><span>Call us directly</span><a href="tel:+19297339915">+1 (929) 733-9915</a></li>
         <li><span>Email us directly</span><a href="mailto:info@greenearthfund.org">info@greenearthfund.org</a></li>
         <li><span>Address</span>447 Broadway, Floor 2, Mailbox #11<br>New York, NY 10013</li>
       </ul>
